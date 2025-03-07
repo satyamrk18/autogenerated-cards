@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards using array</title>
+    <style>
+      .card {
+        height: 50px;
+        width: 350px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        flex-direction: row;
+        border: 2px solid gray;
+        box-shadow: 0px 0px 5px black;
+      }
+      .s-red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const arr = ["satyam", "shivam", "pratik", "rudra"];
+      arr.push("swapnil");
+      const len = arr.length;
+      for (let i = 0; i < len; i++) {
+        const studentName = arr[i].toUpperCase();
+        document.write(
+          `<div class="card ${studentName[0] === "S" ? "s-red" : ""}">${
+            i + 1 + ".  " + studentName
+          }</div>`
+        );
+      }
+    </script>
+  </body>
+</html>
